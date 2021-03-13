@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <table border="1" id="tablesort">
+    <tbody>
+
+      <h1>投錢
+        <button id="fifty" onclick="total1(50)">50</button>
+        <button id="ten" onclick="total1(10)">10</button>
+        <button id="five" onclick="total1(5)">5</button>
+        <button id="one" onclick="total1(1)">1</button>
+      </h1>
+      <h1 id="much">目前投了 元</h1>
+      <tr>
+        <td>item</td>
+        <td></td>
+        <td></td>
+        <td></td>
+
+      </tr>
+      <tr>
+        <td>價格</td>
+        <td></td>
+        <td></td>
+        <td></td>
+
+      </tr>
+      <tr>
+        <td>數量</td>
+        <td id="rc"></td>
+        <td id="gc"></td>
+        <td id="mc"></td>
+      </tr>
+
+      <tr>
+        <td>購買鍵</td>
+        <div class="button">
+          <td><button id="chinese" onclick="button('紅茶','rc')">購買</button></td>
+          <td><button id="chinese" onclick="button('綠茶','gc')">購買</button></td>
+          <td><button id="chinese" onclick="button('奶茶','mc')">購買</button></td>
+        </div>
+      </tr>
+
+    </tbody>
+  </table>
+  <h1 id="abc">得到 元</h1>
+  <h1 id="cba">找零</h1>
+  <table border="1" id="ppp">
+    <tr>
+      <td>紅茶</td>
+      <td><input type="text" id="repl">瓶</td>
+    </tr>
+    <tr>
+      <td>綠茶</td>
+      <td><input type="text" id="gepl">瓶</td>
+    </tr>
+    <tr>
+      <td>奶茶</td>
+      <td><input type="text" id="mlpl">瓶</td>
+    </tr>
+
+  </table>
+  <button onclick="ppl()">補貨</button>
+
+
+
+
+
+  <script>
+
+    var xyz = [
+      { name: '紅茶', price: 30, count: 4 },
+      { name: '綠茶', price: 35, count: 4 },
+      { name: '奶茶', price: 60, count: 4 },
+
+    ];
+    var table = document.getElementById("tablesort");
+
+
+
+
+    table.rows[0].cells[1].innerHTML = xyz[0].name;
+    table.rows[0].cells[2].innerHTML = xyz[1].name;
+    table.rows[0].cells[3].innerHTML = xyz[2].name;
+
+    table.rows[1].cells[1].innerHTML = xyz[0].price;
+    table.rows[1].cells[2].innerHTML = xyz[1].price;
+    table.rows[1].cells[3].innerHTML = xyz[2].price;
+
+    table.rows[2].cells[1].innerHTML = xyz[0].count;
+    table.rows[2].cells[2].innerHTML = xyz[1].count;
+    table.rows[2].cells[3].innerHTML = xyz[2].count;
+
+
+
+
+
+
+
+
+    console.log(typeof xyz[0].count)
+
+
+
+    var sum = 0;
+
+
+    function total1(price) {
+
+      sum = sum + Number(price);
+      document.getElementById("much").innerHTML = "目前投了" + sum + "元";
+      return sum;
+    }
+
+    function button(name, abc) {
+
+
+      for (let i = 0; i < xyz.length; i++) {
+        if (xyz[i].name == name) {
+          if (sum < Number(xyz[i].price)) {
+            alert("錢不夠")
+          } else {
+            if (0 == Number(xyz[i].count)) {
+              alert(name + "沒有了")
+            } else {
+              document.getElementById("abc").innerHTML = "得到" + 1 + "杯" + name;
+
+              document.getElementById("cba").innerHTML = "找零" + Number(sum - Number(xyz[i].price)) + "元";
+              document.getElementById("much").innerHTML = "目前投了0元";
+              xyz[i].count = Number(xyz[i].count - 1)
+              //  document.getElementById(abc).innerHTML = xyz[i].count;
+              view()
+              sum = 0
+            }
+
+          }
+        }
+
+      }
+    }
+
+
+
+
+    /*  function red() {
+        var ac = parseInt(document.getElementById("rc").innerHTML);
+        console.log(typeof ac)
+        if (sum == 0) {
+          alert("你沒投錢")
+        } else if (sum < 30) {
+          alert("錢不夠")
+        } else {
+          var a;
+          a = Math.floor(sum / 30);
+          if (a > ac) {
+            alert("紅茶沒有了")
+          } else {
+            document.getElementById("abc").innerHTML = "得到" + a + "杯紅茶";
+  
+            document.getElementById("cba").innerHTML = "找零" + Number(sum - 30 * a) + "元";
+            document.getElementById("much").innerHTML = "目前投了0元";
+            sum = 0;
+            ac = ac - a;
+            document.getElementById("rc").innerHTML = ac;
+            return ac;
+          }
+        }
+      }
+  
+      function green() {
+        var bc = document.getElementById("gc").innerHTML;
+        if (sum == 0) {
+          alert("你沒投錢")
+        } else if (sum < 35) {
+          alert("錢不夠")
+        } else {
+          var b;
+          b = Math.floor(sum / 35);
+          if (b > bc) {
+            alert("綠茶沒有了")
+          } else {
+            document.getElementById("abc").innerHTML = "得到" + b + "杯綠茶";
+  
+            document.getElementById("cba").innerHTML = "找零" + Number(sum - 35 * b) + "元";
+            document.getElementById("much").innerHTML = "目前投了0元";
+            sum = 0;
+            bc = bc - b;
+            document.getElementById("gc").innerHTML = bc;
+  
+          }
+        }
+      }
+  
+      function milk() {
+        var ca = document.getElementById("mc").innerHTML;
+        if (sum == 0) {
+          alert("你沒投錢")
+        } else if (sum < 60) {
+          alert("錢不夠")
+        } else {
+          var c;
+          c = Math.floor(sum / 60);
+          if (c > ca) {
+            alert("奶茶沒有了")
+          } else {
+            document.getElementById("abc").innerHTML = "得到" + c + "杯奶茶";
+  
+            document.getElementById("cba").innerHTML = "找零" + Number(sum - 60 * c) + "元";
+            document.getElementById("much").innerHTML = "目前投了0元";
+            sum = 0;
+            ca = ca - c;
+            document.getElementById("mc").innerHTML = ca;
+            return ca;
+          }
+        }
+      }
+  
+  */
+    /*function ppl(){
+      
+   
+   
+   
+         var rpl = document.getElementById("repl").value;
+         var gpl = document.getElementById("gepl").value;
+         var mpl = document.getElementById("mlpl").value;
+   
+         document.getElementById("rc").innerHTML = Number(xyz.count[0]) + Number(rpl);
+         document.getElementById("gc").innerHTML = Number(xyz.count[1]) + Number(gpl);
+         document.getElementById("mc").innerHTML = Number(xyz.count[2]) + Number(mpl);
+   
+         document.getElementById("repl").value = 0;
+         document.getElementById("gepl").value = 0;
+         document.getElementById("mlpl").value = 0;
+    }*/
+
+
+
+    function ppl() {
+
+      var ac = document.getElementById("rc").innerHTML;
+      var bc = document.getElementById("gc").innerHTML;
+      var ca = document.getElementById("mc").innerHTML;
+
+      var rpl = document.getElementById("repl").value;
+      var gpl = document.getElementById("gepl").value;
+      var mpl = document.getElementById("mlpl").value;
+
+      xyz[0].count = Number(ac) + Number(rpl);
+      xyz[1].count = Number(bc) + Number(gpl);
+      xyz[2].count = Number(ca) + Number(mpl);
+
+    //  document.getElementById("rc").innerHTML = xyz[0].count;
+  //    document.getElementById("gc").innerHTML = xyz[1].count;
+   //   document.getElementById("mc").innerHTML = xyz[2].count;
+      view()
+      document.getElementById("repl").value = 0;
+      document.getElementById("gepl").value = 0;
+      document.getElementById("mlpl").value = 0;
+
+    }
+
+
+    function view() {
+      document.getElementById("rc").innerHTML = xyz[0].count;
+      document.getElementById("gc").innerHTML = xyz[1].count;
+      document.getElementById("mc").innerHTML = xyz[2].count;
+    }
+
+
+
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  
+</head>
+<body>
+    <div class="login_page">
+    
+
+        <div class="login">  
+          
+   
+    <form action="用戶管理.php">
+           <h1>帳號</h1>
+           <input type="text" id="username" name="username" placeholder="請輸入電子郵件" required>
+            <h1>密碼</h1>
+            
+            <input type="text" id="password" name="password" placeholder="請輸入密碼" required>
+            
+            <input type="submit" value="登入" class="submit" onclick="abe()">
+          
+
+        </form>
+          <script>
+              function abe(){
+                 
+                  
+                  var accountInput=document.getElementById('username').value
+                  console.log(accountInput,'',accountInput==='')
+                  var passwordInput=document.getElementById('password').value
+                  console.log(passwordInput,'',accountInput==='')
+                  if((accountInput !='' && passwordInput !='')==true){
+                      alert('註冊成功')
+                    }
+              }
+          </script>
+</body>
+</html>
