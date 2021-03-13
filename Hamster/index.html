@@ -4,46 +4,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>999</title>
+    <link rel="stylesheet" href="css/main.css">
 </head>
 
-<body>
-    <table border="1" width=300 height=100 id="tablesort">
-        <tr>
-            <td id="1">
-                <img id="j" onclick="abc(1)" src="./bb.jpg" alt="do ra me fa">
-            </td>
+<body style="background-image:url('./bbb.jpg');">
+    <div class="bgc">
+        <div class="button">
+        
+            <input type="button" id="start" value="start" onclick="start()">
+        </div>
+        <div class="abc"></div>
+        <div class="score" id="score">0分</div>
+        <div class="word">
+            <h1 id="t"></h1>
+        </div>
+
+        <div class="photo">
+            <div class="row">
+           
 
 
-            <td id="2">
-                <img id="k" onclick="abc(2)" src="./bb.jpg" alt="do ra me fa">
-            </td>
+                <img id="j" onclick="abc(1)" src=" " alt="">
+                <img id="k" onclick="abc(2)" src=" " alt="">
+                <img id="l" onclick="abc(3)" src=" " alt="">
+            </div>
+            <div class="row">
+                <img id="m" onclick="abc(4)" src=" " alt="">
+                <img id="n" onclick="abc(5)" src=" " alt="">
+                <img id="o" onclick="abc(6)" src=" " alt="">
+            </div>
+
+        </div>
 
 
-            <td id="3">
-                <img id="l" onclick="abc(3)" src="./bb.jpg" alt="do ra me fa">
-            </td>
 
 
-            <td id="4">
-                <img id="m" onclick="abc(4)" src="./bb.jpg" alt="do ra me fa">
-            </td>
 
 
-            <td id="5">
-                <img id="n" onclick="abc(5)" src="./bb.jpg" alt="do ra me fa">
-            </td>
-
-        </tr>
-
-    </table>
-
-    <button style="width: 500;height: 500;" onclick="start()">Start</button>
-    <button style="width: 500;height: 500;" onclick="again()">again</button>
-    <h1 id="t"></h1>
-    <div class="score" id="score"></div>
 
 
+    </div>
 
 
     <script>
@@ -53,14 +54,14 @@
         var counter = 30;
 
         function d() {
-            
-           
-            a = Math.floor(Math.random() * 5) + 1;
 
-           
 
-            console.log(a , 100000)
-        
+            a = Math.floor(Math.random() * 6) + 1;
+
+
+
+            console.log(a, 100000)
+
         }
 
 
@@ -68,7 +69,8 @@
 
 
         function start() {
-
+            document.getElementById("start").style.display = "none";
+            
             console.log(a)
             counter = 30;
             setInterval(function () {
@@ -78,42 +80,48 @@
                     f.innerHTML = counter;
                     console.log(counter, a)
                     d()
-                 
+
                     if (a == 1) {
-                        document.getElementById('j').src =  "./cc.png";
+                        document.getElementById('j').src = "./dd.png";
 
                         setTimeout(() => {
 
-                            document.getElementById("j").src = "./bb.jpg";
+                            document.getElementById("j").src = " ";
 
                         }, 1000);
 
                     } else if (a == 2) {
-                        document.getElementById("k").src =  "./cc.png";
+                        document.getElementById("k").src = "./cc.png";
                         setTimeout(() => {
 
-                            document.getElementById("k").src = "./bb.jpg";
+                            document.getElementById("k").src = " ";
                         }, 1000);
 
                     } else if (a == 3) {
-                        document.getElementById("l").src =  "./cc.png";
+                        document.getElementById("l").src = "./cc.png";
                         setTimeout(() => {
 
-                            document.getElementById("l").src = "./bb.jpg";
+                            document.getElementById("l").src = " ";
                         }, 1000);
 
                     } else if (a == 4) {
-                        document.getElementById("m").src =  "./cc.png";
+                        document.getElementById("m").src = "./cc.png";
                         setTimeout(() => {
 
-                            document.getElementById("m").src = "./bb.jpg";
+                            document.getElementById("m").src = " ";
                         }, 1000);
 
                     } else if (a == 5) {
-                        document.getElementById("n").src =  "./cc.png";
+                        document.getElementById("n").src = "./cc.png";
                         setTimeout(() => {
 
-                            document.getElementById("n").src = "./bb.jpg";
+                            document.getElementById("n").src = " ";
+                        }, 1000);
+                    } else if (a == 6) {
+                        document.getElementById("o").src = "./cc.png";
+                        setTimeout(() => {
+
+                            document.getElementById("o").src = " ";
                         }, 1000);
                     }
 
@@ -121,8 +129,8 @@
                 }
 
                 if (counter === 0) {
-                    alert('時間到')
-
+                    alert('時間到，分數' + total + '分')
+                    window.location.reload();
                 }
 
             }, 2000);
@@ -144,20 +152,8 @@
 
             }
         }
-        function again() {
-            a = 0
-            total = 0;
-            ate(0)
-            zero()
 
-        }
-        function zero() {
-            document.getElementById('1').style.backgroundColor = "white";
-            document.getElementById('2').style.backgroundColor = "white";
-            document.getElementById('3').style.backgroundColor = "white";
-            document.getElementById('4').style.backgroundColor = "white";
-            document.getElementById('5').style.backgroundColor = "white";
-        }
+
         function ate(score) {
             document.getElementById('score').innerHTML = score + "分";
         }
