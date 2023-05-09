@@ -1,3 +1,8 @@
+a {
+  color:black;
+  text-decoration:none;
+  font-size: 25px;
+}
 .ti {
   display: flex;
   justify-content:center;
@@ -7,12 +12,12 @@
     grid-template-columns: auto auto auto auto;
     grid-template-rows: 100px 100px 100px;
     grid-gap: 10px;
-    background-color: #2196f3;
+    background-color: #3976D6;
     padding: 10px;
   }
   
   .grid-container > div {
-    background-color: #d7ebfd;
+    background-color: #f9c6cf;
     text-align: center;
     padding: 20px 0;
   }
@@ -48,43 +53,59 @@
   }
   .hover3 {
     display: none;
-    background-color: #c4d8e2;
+    background-color: #FAF4FF;
     height: 100%;
+    opacity: 0.632;
+
   }
   .hover4 {
     display: none;
-    background-color: #c4d8e2;
+    background-color: #FAF4FF;
     height: 100%;
+    opacity: 0.632;
+
   }
   .hover5 {
     display: none;
-    background-color: #c4d8e2;
+    background-color: #FAF4FF;
     height: 100%;
+    opacity: 0.632;
+
   }
   .hover6 {
     display: none;
-    background-color: #c4d8e2;
+    background-color: #FAF4FF;
     height: 100%;
+    opacity: 0.632;
+
   }
   .hover7 {
     display: none;
-    background-color: #c4d8e2;
+    background-color: #FAF4FF;
     height: 100%;
+    opacity: 0.632;
+
   }
   .hover8 {
     display: none;
-    background-color: #c4d8e2;
+    background-color: #FAF4FF;
     height: 100%;
+    opacity: 0.632;
+
   }
   .hover9 {
     display: none;
-    background-color: #c4d8e2;
+    background-color: #FAF4FF;
     height: 100%;
+    opacity: 0.632;
+
   }
   .hover10 {
     display: none;
-    background-color: #c4d8e2;
+    background-color: #FAF4FF;
     height: 100%;
+    opacity: 0.632;
+
   }
   
   
