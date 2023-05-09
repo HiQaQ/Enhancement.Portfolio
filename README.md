@@ -1,6 +1,7 @@
 <html>
 # Enhancement.Portfolio
 <head>
+  <style>
   .grid-container {
   display: grid;
   grid-template-columns: auto auto auto auto;
@@ -86,7 +87,7 @@
   height: 100%;
 }
 
-
+  </style>
 </head>
 <div class="grid-container">
   <div class="item1">
