@@ -1,112 +1,84 @@
-a {
-  color:black;
-  text-decoration:none;
-  font-size: 25px;
+* {
+  text-decoration: none;
+  color: black;
 }
-.ti {
-  display: flex;
-  justify-content:center;
+.en {
+  text-align: center;
 }
-.grid-container {
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    grid-template-rows: 100px 100px 100px;
-    grid-gap: 10px;
-    background-color: #3976D6;
-    padding: 10px;
-  }
-  
-  .grid-container > div {
-    background-color: #f9c6cf;
+.year {
+  text-align: center;
+}
+.senior a {
+  color: #92a8d1;
+  text-align: center;
+}
+.senior h2 {
+  display: inline-block;
+  position: relative;
+  text-align: center;
+}
+.senior h2:after {
+  width: 0%;
+  height: 1px;
+  content: "";
+  background-color: #92a8d1;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: all 0.2s linear;
+}
+
+.senior h2:hover::after {
+  width: 100%;
+}
+.nkust {
     text-align: center;
-    padding: 20px 0;
-  }
-  .grid-container {
-    display: grid;
-    grid-template-columns: repeat(2, auto);
-    grid-template-rows: repeat(2, auto);
-    grid-auto-flow: row;
-  }
-  .item3:hover .hover3 {
-    display: block;
-  }
-  .item4:hover .hover4 {
-    display: block;
-  }
-  .item5:hover .hover5 {
-    display: block;
-  }
-  .item6:hover .hover6 {
-    display: block;
-  }
-  .item7:hover .hover7 {
-    display: block;
-  }
-  .item8:hover .hover8 {
-    display: block;
-  }
-  .item9:hover .hover9 {
-    display: block;
-  }
-  .item10:hover .hover10 {
-    display: block;
-  }
-  .hover3 {
-    display: none;
-    background-color: #FAF4FF;
-    height: 100%;
-    opacity: 0.632;
+}
+.nkust a {
+  color: #f7cac9;
+  text-align: center;
+}
+.nkust h2 {
+  display: inline-block;
+  position: relative;
+}
+.nkust h2:after {
+  width: 0%;
+  height: 1px;
+  content: "";
+  background-color: #f7cac9;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: all 0.3s linear;
+}
+.nkust h2:hover::after {
+  width: 100%;
+}
 
-  }
-  .hover4 {
-    display: none;
-    background-color: #FAF4FF;
-    height: 100%;
-    opacity: 0.632;
+.representative {
+  display: none;
+}
 
-  }
-  .hover5 {
-    display: none;
-    background-color: #FAF4FF;
-    height: 100%;
-    opacity: 0.632;
-
-  }
-  .hover6 {
-    display: none;
-    background-color: #FAF4FF;
-    height: 100%;
-    opacity: 0.632;
-
-  }
-  .hover7 {
-    display: none;
-    background-color: #FAF4FF;
-    height: 100%;
-    opacity: 0.632;
-
-  }
-  .hover8 {
-    display: none;
-    background-color: #FAF4FF;
-    height: 100%;
-    opacity: 0.632;
-
-  }
-  .hover9 {
-    display: none;
-    background-color: #FAF4FF;
-    height: 100%;
-    opacity: 0.632;
-
-  }
-  .hover10 {
-    display: none;
-    background-color: #FAF4FF;
-    height: 100%;
-    opacity: 0.632;
-
-  }
-  
-  
-  
+.title {
+  height: 70%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.representative .name {
+  width: 70%;
+  height: 100%;
+  float: left;
+  align-items: center;
+}
+.representative .name .chinese {
+  text-align: center;
+}
+.representative .name .english {
+  text-align: center;
+}
+.representative .logo img {
+  max-width: 30%;
+  max-height: 100%;
+}
