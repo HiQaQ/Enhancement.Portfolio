@@ -1,17 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>登入系統</title>
-</head>
-<body>
-  <form action="/login" method="post">
-    <input type="text" name="username" placeholder="帳號">
-    <input type="password" name="password" placeholder="密碼">
-    <input type="submit" value="登入">
-    <button ><a href="https://www2.nkust.edu.tw/~c112110159">跳跳</a></button>
-  </form>
-</body>
-<script src="nkust.js"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <title>登入系統</title>
+    <link rel="stylesheet" href="nkust.css">
 
+  </head>
+  <body>
+    <div class="login_page">
+      <div class="title">
+        <h1>En NKUST</h1>
+      </div>
+      <div class="login">
+        <input type="text" placeholder="Account"  class="account" id="account"/>
+        <input type="password" placeholder="Password" class="password" id="password"/>
+      </div>
+      <div class="confirm">
+        <button class="confirm"><a href="https://www2.nkust.edu.tw/~c112110159">Confirm</a></button>
+      </div>
+    </div>
+  </body>
+  <script src="nkust.js"></script>
 </html>

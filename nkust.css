@@ -1,24 +1,32 @@
-body {
-    font-family: sans-serif;
-  }
+.login_page{
+
+  padding: 10px;
+  width: 230px;
+  height: 300px;
+
+
+  box-shadow: 0 0px 70px rgba(0, 0, 0, 0.1);
   
-  .container {
-    width: 300px;
-    margin: 0 auto;
-  }
-  
-  h1 {
-    text-align: center;
-  }
-  
-  input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-  }
-  
-  input[type="submit"] {
-    background-color: #000;
-    color: #fff;
-    cursor: pointer;
-  }
+  /*定位對齊*/
+  position:relative;   
+  margin: auto;
+  top: 100px;
+  text-align:center;  
+}
+.account{
+  padding: 2px;
+  margin: 10px;
+}
+.password{
+  padding: 2px;
+  margin: 10px;
+}
+.confirm a{
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+}
+input::placeholder {
+  text-align: center;
+  vertical-align: middle;
+}
