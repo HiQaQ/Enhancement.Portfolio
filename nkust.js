@@ -5,7 +5,7 @@ function validateLogin() {
   const password = document.querySelector("input[name='password']").value;
 
   // 檢查帳號和密碼是否正確
-  const isLoggedIn = username === "admin" && password === "123456";
+  const isLoggedIn = username === "a" && password === "1";
 
   // 如果登入成功，則導向首頁
   if (isLoggedIn) {
