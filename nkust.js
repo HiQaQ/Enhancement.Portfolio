@@ -9,7 +9,7 @@ function validateLogin() {
 
   // 如果登入成功，則導向首頁
   if (isLoggedIn) {
-    window.location.href = "www2.nkust.edu.tw/~c112110159";
+    window.location.href = "https://www2.nkust.edu.tw/~c112110159";
   }
 }
 
