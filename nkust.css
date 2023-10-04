@@ -17,6 +17,9 @@
     padding: 2px;
     margin: 10px;
   }
+.confirm{
+    margin:10px;
+}
   .confirm  a{
     display: inline-block;
     text-decoration: none;
@@ -29,6 +32,9 @@
   .digital{
     text-align: center;
   }
+.dconfirm{
+    margin:10px;
+}
   .dconfirm a{
     display: inline-block;
     text-decoration: none;
