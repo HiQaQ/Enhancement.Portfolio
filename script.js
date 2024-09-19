@@ -14,7 +14,7 @@ function showNextWord() {
         setTimeout(() => {
           currentWordIndex++;
           showNextWord();
-        }, 3000);
+        }, 1000);
       },
       currentWordIndex === words.length - 1 ? 1200 : 500
     );
