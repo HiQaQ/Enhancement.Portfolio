@@ -1,0 +1,25 @@
+body {
+  background-color: black;
+  color: white;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+#welcomeContainer {
+  text-align: center;
+  font-size: 3em;
+}
+
+#welcomeText {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+#welcomeText.show {
+  opacity: 1;
+}
