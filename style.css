@@ -17,7 +17,7 @@ body {
 
 #welcomeText {
   opacity: 0;
-  transition: opacity 3.0s ease;
+  transition: opacity 0.8s ease;
 }
 
 #welcomeText.show {
