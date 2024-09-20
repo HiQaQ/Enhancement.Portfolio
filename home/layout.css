@@ -1,0 +1,38 @@
+@media (max-height: 768px) {
+  .author-image {
+    width: 75px;
+    height: 75px;
+  }
+  .author-animation span {
+    font-size: 200%;
+  }
+}
+@media (max-height: 1024px) {
+    .author-image {
+      width: 100px;
+      height: 100px;
+    }
+    .author-animation span {
+      font-size: 300%;
+    }
+  }
+@media (max-height: 640px) {
+    body{
+        line-height: 1;
+    }
+    .author-image {
+      width: 50px;
+      height: 50px;
+    }
+    .author-animation span {
+      font-size: 150%;
+    }
+   .card h2{
+    font-size: 15px;
+   }
+   #timeline-section .tag{
+    font-size: 10px;
+    padding: 2px 7px;
+   }
+  }
+  
