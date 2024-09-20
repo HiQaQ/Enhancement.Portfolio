@@ -1,4 +1,4 @@
-@media (max-height: 768px) {
+@media (max-width: 768px) {
   .author-image {
     width: 75px;
     height: 75px;
@@ -7,7 +7,7 @@
     font-size: 200%;
   }
 }
-@media (max-height: 1024px) {
+@media (max-width: 1024px) {
     .author-image {
       width: 100px;
       height: 100px;
@@ -16,7 +16,7 @@
       font-size: 300%;
     }
   }
-@media (max-height: 640px) {
+@media (max-width: 640px) {
     body{
         line-height: 1;
     }
