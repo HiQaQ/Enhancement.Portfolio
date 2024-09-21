@@ -1,0 +1,97 @@
+body {
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.header {
+  height: 17vh;
+}
+.header h1 {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.header h1 img {
+  max-height: 6vh;
+}
+.header span {
+  max-height: 3vh;
+}
+.header ul {
+  display: flex;
+  justify-content: center;
+  padding: 0px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+.header ul li {
+  float: left;
+  margin: 20px;
+  list-style-type: none;
+}
+.header ul li a {
+  text-decoration: none;
+  color: black;
+}
+.content {
+  height: 78vh;
+}
+.content .title {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  line-height: 2;
+}
+.content .title span {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+.content .container {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 50px;
+}
+.content .container .topic {
+  width: 80%;
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+.content .container .topic:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.indent {
+  text-indent: 2em;
+  width: 400px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.indent p {
+  margin-bottom: 10px;
+}
+
+.blank {
+  width: 3vw;
+}
+.content .container ul {
+  padding: 0;
+}
+.content .container ul li {
+  list-style-type: none;
+}
+.footer {
+  height: 4vh;
+  border-top: 1px solid black;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+}
