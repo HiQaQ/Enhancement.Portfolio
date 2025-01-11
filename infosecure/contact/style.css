@@ -1,0 +1,167 @@
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 48px;
+  color: #292929;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+h2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 30px;
+  color: #1e3a8a;
+}
+p {
+  font-family: "Georgia", serif;
+  font-size: 18px;
+  color: #292929;
+  line-height: 1.5;
+}
+a {
+  color: black;
+  text-decoration: none;
+}
+.header h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header h1 img {
+  max-height: 3vh;
+}
+.header span .company a {
+  color: #800000;
+}
+.header ul {
+  display: flex;
+  justify-content: center;
+  padding: 0px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+.header ul li {
+  float: left;
+  margin: 20px;
+  list-style-type: none;
+}
+.header ul li a {
+  text-decoration: none;
+  color: black;
+}
+.contents {
+  border-radius: 10px;
+  margin-left: 30%;
+  margin-right: 30%;
+
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+.contents:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.text-section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+}
+::placeholder {
+  color: #2196f3;
+}
+.item {
+  padding: 30px;
+}
+.item:last-child {
+  grid-column: 1 / span 2;
+}
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid black;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+button {
+  grid-column: 1 / span 2;
+  width: 20%;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+.footer {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.footer heading {
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+.footer ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.contact-form {
+  float: left;
+}
+.contact-form-company {
+  font-family: "Playfair Display", serif;
+  font-weight: bold;
+}
+.contact-email,
+.contact-address {
+  font-family: "Roboto Slab", sans-serif;
+  font-size: 16px;
+  color: #292929;
+  font-weight: bold;
+}
+.contact-number,
+.contact-fax {
+  font-family: "Oswald", sans-serif;
+  font-size: 18px;
+  color: #1e3a8a;
+  font-weight: 700;
+}
+.contact-form img {
+  width: 5vw;
+  height: 6vh;
+}
+.contact-form ul {
+  line-height: 2;
+}
+.contact-form li {
+  display: block;
+  margin-bottom: 5px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+.contact-form li:hover {
+  background-color: rgba(212, 175, 55, 0.1);
+}
+.contentf {
+  display: flex;
+  justify-content: space-around;
+}
+.map {
+  float: right;
+  width: 50%;
+  height: 100%;
+}
+.rights {
+  border-top: 1px solid black;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
